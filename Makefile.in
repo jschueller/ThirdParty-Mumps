@@ -114,9 +114,11 @@ host_triplet = @host@
 @MUMPS_DOUBLE_TRUE@  MUMPS/src/dfac_asm_master_ELT_m.F \
 @MUMPS_DOUBLE_TRUE@  MUMPS/src/dfac_asm_master_m.F \
 @MUMPS_DOUBLE_TRUE@  MUMPS/src/dfac_b.F \
+@MUMPS_DOUBLE_TRUE@  MUMPS/src/dfac_diag.F \
 @MUMPS_DOUBLE_TRUE@  MUMPS/src/dfac_determinant.F \
 @MUMPS_DOUBLE_TRUE@  MUMPS/src/dfac_distrib_distentry.F \
 @MUMPS_DOUBLE_TRUE@  MUMPS/src/dfac_distrib_ELT.F \
+@MUMPS_DOUBLE_TRUE@  MUMPS/src/dfac_dist_arrowheads_omp.F \
 @MUMPS_DOUBLE_TRUE@  MUMPS/src/dfac_driver.F \
 @MUMPS_DOUBLE_TRUE@  MUMPS/src/dfac_front_aux.F \
 @MUMPS_DOUBLE_TRUE@  MUMPS/src/dfac_front_LDLT_type1.F \
@@ -184,6 +186,7 @@ host_triplet = @host@
 @MUMPS_DOUBLE_TRUE@  MUMPS/src/dsol_bwd.F \
 @MUMPS_DOUBLE_TRUE@  MUMPS/src/dsol_c.F \
 @MUMPS_DOUBLE_TRUE@  MUMPS/src/dsol_distrhs.F \
+@MUMPS_DOUBLE_TRUE@  MUMPS/src/dsol_distsol.F \
 @MUMPS_DOUBLE_TRUE@  MUMPS/src/dsol_driver.F \
 @MUMPS_DOUBLE_TRUE@  MUMPS/src/dsol_fwd_aux.F \
 @MUMPS_DOUBLE_TRUE@  MUMPS/src/dsol_fwd.F \
@@ -215,9 +218,11 @@ host_triplet = @host@
 @MUMPS_SINGLE_TRUE@  MUMPS/src/sfac_asm_master_ELT_m.F \
 @MUMPS_SINGLE_TRUE@  MUMPS/src/sfac_asm_master_m.F \
 @MUMPS_SINGLE_TRUE@  MUMPS/src/sfac_b.F \
+@MUMPS_SINGLE_TRUE@  MUMPS/src/sfac_diag.F \
 @MUMPS_SINGLE_TRUE@  MUMPS/src/sfac_determinant.F \
 @MUMPS_SINGLE_TRUE@  MUMPS/src/sfac_distrib_distentry.F \
 @MUMPS_SINGLE_TRUE@  MUMPS/src/sfac_distrib_ELT.F \
+@MUMPS_SINGLE_TRUE@  MUMPS/src/sfac_dist_arrowheads_omp.F \
 @MUMPS_SINGLE_TRUE@  MUMPS/src/sfac_driver.F \
 @MUMPS_SINGLE_TRUE@  MUMPS/src/sfac_front_aux.F \
 @MUMPS_SINGLE_TRUE@  MUMPS/src/sfac_front_LDLT_type1.F \
@@ -285,6 +290,7 @@ host_triplet = @host@
 @MUMPS_SINGLE_TRUE@  MUMPS/src/ssol_bwd.F \
 @MUMPS_SINGLE_TRUE@  MUMPS/src/ssol_c.F \
 @MUMPS_SINGLE_TRUE@  MUMPS/src/ssol_distrhs.F \
+@MUMPS_SINGLE_TRUE@  MUMPS/src/ssol_distsol.F \
 @MUMPS_SINGLE_TRUE@  MUMPS/src/ssol_driver.F \
 @MUMPS_SINGLE_TRUE@  MUMPS/src/ssol_fwd_aux.F \
 @MUMPS_SINGLE_TRUE@  MUMPS/src/ssol_fwd.F \
@@ -361,10 +367,11 @@ am__dirstamp = $(am__leading_dot)dirstamp
 @MUMPS_DOUBLE_TRUE@	MUMPS/src/dfac_asm.lo \
 @MUMPS_DOUBLE_TRUE@	MUMPS/src/dfac_asm_master_ELT_m.lo \
 @MUMPS_DOUBLE_TRUE@	MUMPS/src/dfac_asm_master_m.lo \
-@MUMPS_DOUBLE_TRUE@	MUMPS/src/dfac_b.lo \
+@MUMPS_DOUBLE_TRUE@	MUMPS/src/dfac_b.lo MUMPS/src/dfac_diag.lo \
 @MUMPS_DOUBLE_TRUE@	MUMPS/src/dfac_determinant.lo \
 @MUMPS_DOUBLE_TRUE@	MUMPS/src/dfac_distrib_distentry.lo \
 @MUMPS_DOUBLE_TRUE@	MUMPS/src/dfac_distrib_ELT.lo \
+@MUMPS_DOUBLE_TRUE@	MUMPS/src/dfac_dist_arrowheads_omp.lo \
 @MUMPS_DOUBLE_TRUE@	MUMPS/src/dfac_driver.lo \
 @MUMPS_DOUBLE_TRUE@	MUMPS/src/dfac_front_aux.lo \
 @MUMPS_DOUBLE_TRUE@	MUMPS/src/dfac_front_LDLT_type1.lo \
@@ -431,6 +438,7 @@ am__dirstamp = $(am__leading_dot)dirstamp
 @MUMPS_DOUBLE_TRUE@	MUMPS/src/dsol_bwd_aux.lo \
 @MUMPS_DOUBLE_TRUE@	MUMPS/src/dsol_bwd.lo MUMPS/src/dsol_c.lo \
 @MUMPS_DOUBLE_TRUE@	MUMPS/src/dsol_distrhs.lo \
+@MUMPS_DOUBLE_TRUE@	MUMPS/src/dsol_distsol.lo \
 @MUMPS_DOUBLE_TRUE@	MUMPS/src/dsol_driver.lo \
 @MUMPS_DOUBLE_TRUE@	MUMPS/src/dsol_fwd_aux.lo \
 @MUMPS_DOUBLE_TRUE@	MUMPS/src/dsol_fwd.lo MUMPS/src/dsol_lr.lo \
@@ -457,10 +465,11 @@ am__dirstamp = $(am__leading_dot)dirstamp
 @MUMPS_SINGLE_TRUE@	MUMPS/src/sfac_asm.lo \
 @MUMPS_SINGLE_TRUE@	MUMPS/src/sfac_asm_master_ELT_m.lo \
 @MUMPS_SINGLE_TRUE@	MUMPS/src/sfac_asm_master_m.lo \
-@MUMPS_SINGLE_TRUE@	MUMPS/src/sfac_b.lo \
+@MUMPS_SINGLE_TRUE@	MUMPS/src/sfac_b.lo MUMPS/src/sfac_diag.lo \
 @MUMPS_SINGLE_TRUE@	MUMPS/src/sfac_determinant.lo \
 @MUMPS_SINGLE_TRUE@	MUMPS/src/sfac_distrib_distentry.lo \
 @MUMPS_SINGLE_TRUE@	MUMPS/src/sfac_distrib_ELT.lo \
+@MUMPS_SINGLE_TRUE@	MUMPS/src/sfac_dist_arrowheads_omp.lo \
 @MUMPS_SINGLE_TRUE@	MUMPS/src/sfac_driver.lo \
 @MUMPS_SINGLE_TRUE@	MUMPS/src/sfac_front_aux.lo \
 @MUMPS_SINGLE_TRUE@	MUMPS/src/sfac_front_LDLT_type1.lo \
@@ -527,6 +536,7 @@ am__dirstamp = $(am__leading_dot)dirstamp
 @MUMPS_SINGLE_TRUE@	MUMPS/src/ssol_bwd_aux.lo \
 @MUMPS_SINGLE_TRUE@	MUMPS/src/ssol_bwd.lo MUMPS/src/ssol_c.lo \
 @MUMPS_SINGLE_TRUE@	MUMPS/src/ssol_distrhs.lo \
+@MUMPS_SINGLE_TRUE@	MUMPS/src/ssol_distsol.lo \
 @MUMPS_SINGLE_TRUE@	MUMPS/src/ssol_driver.lo \
 @MUMPS_SINGLE_TRUE@	MUMPS/src/ssol_fwd_aux.lo \
 @MUMPS_SINGLE_TRUE@	MUMPS/src/ssol_fwd.lo MUMPS/src/ssol_lr.lo \
@@ -562,9 +572,9 @@ am_libcoinmumps_la_OBJECTS = MUMPS/src/ana_AMDMF.lo \
 	MUMPS/src/mumps_static_mapping.lo \
 	MUMPS/src/mumps_thread_affinity.lo \
 	MUMPS/src/mumps_register_thread.lo MUMPS/src/mumps_thread.lo \
-	MUMPS/src/mumps_type2_blocking.lo MUMPS/src/mumps_type_size.lo \
-	MUMPS/src/mumps_version.lo MUMPS/src/omp_tps_common_m.lo \
-	MUMPS/src/sol_common.lo MUMPS/src/tools_common.lo \
+	MUMPS/src/mumps_type2_blocking.lo MUMPS/src/mumps_version.lo \
+	MUMPS/src/omp_tps_common_m.lo MUMPS/src/sol_common.lo \
+	MUMPS/src/sol_ds_common_m.lo MUMPS/src/tools_common.lo \
 	MUMPS/libseq/mpi.lo MUMPS/libseq/mpic.lo \
 	MUMPS/libseq/elapse.lo $(am__objects_1) $(am__objects_2)
 libcoinmumps_la_OBJECTS = $(am_libcoinmumps_la_OBJECTS)
@@ -852,9 +862,9 @@ libcoinmumps_la_SOURCES = MUMPS/src/ana_AMDMF.F MUMPS/src/ana_blk.F \
 	MUMPS/src/mumps_static_mapping.F \
 	MUMPS/src/mumps_thread_affinity.c \
 	MUMPS/src/mumps_register_thread.c MUMPS/src/mumps_thread.c \
-	MUMPS/src/mumps_type2_blocking.F MUMPS/src/mumps_type_size.F \
-	MUMPS/src/mumps_version.F MUMPS/src/omp_tps_common_m.F \
-	MUMPS/src/sol_common.F MUMPS/src/tools_common.F \
+	MUMPS/src/mumps_type2_blocking.F MUMPS/src/mumps_version.F \
+	MUMPS/src/omp_tps_common_m.F MUMPS/src/sol_common.F \
+	MUMPS/src/sol_ds_common_m.F MUMPS/src/tools_common.F \
 	MUMPS/libseq/mpi.f MUMPS/libseq/mpic.c MUMPS/libseq/elapse.c \
 	$(am__append_2) $(am__append_4)
 libcoinmumps_la_LIBADD = $(MUMPS_LFLAGS)
@@ -891,7 +901,6 @@ OBJS_COMMON_OTHER = \
   MUMPS/src/ana_AMDMF.lo \
   MUMPS/src/bcast_errors.lo \
   MUMPS/src/estim_flops.lo \
-  MUMPS/src/mumps_type_size.lo \
   MUMPS/src/mumps_type2_blocking.lo \
   MUMPS/src/mumps_version.lo \
   MUMPS/src/mumps_print_defined.lo \
@@ -915,7 +924,8 @@ OBJS_COMMON_OTHER = \
   MUMPS/src/mumps_thread_affinity.lo \
   MUMPS/src/mumps_register_thread.lo \
   MUMPS/src/tools_common.lo \
-  MUMPS/src/sol_common.lo
+  MUMPS/src/sol_common.lo \
+  MUMPS/src/sol_ds_common_m.lo
 
 DOBJS_MOD = \
   MUMPS/src/dana_aux.lo \
@@ -959,6 +969,7 @@ DOBJS_OTHER = \
   MUMPS/src/dfac_driver.lo \
   MUMPS/src/dsol_driver.lo \
   MUMPS/src/dsol_distrhs.lo \
+  MUMPS/src/dsol_distsol.lo \
   MUMPS/src/dend_driver.lo \
   MUMPS/src/dana_aux_ELT.lo \
   MUMPS/src/dana_dist_m.lo \
@@ -969,8 +980,10 @@ DOBJS_OTHER = \
   MUMPS/src/dfac_asm_ELT.lo \
   MUMPS/src/dfac_asm.lo \
   MUMPS/src/dfac_b.lo \
+  MUMPS/src/dfac_diag.lo \
   MUMPS/src/dfac_distrib_distentry.lo \
   MUMPS/src/dfac_distrib_ELT.lo \
+  MUMPS/src/dfac_dist_arrowheads_omp.lo \
   MUMPS/src/dfac_lastrtnelind.lo \
   MUMPS/src/dfac_mem_alloc_cb.lo \
   MUMPS/src/dfac_mem_compress_cb.lo \
@@ -1061,6 +1074,7 @@ SOBJS_OTHER = \
   MUMPS/src/sfac_driver.lo \
   MUMPS/src/ssol_driver.lo \
   MUMPS/src/ssol_distrhs.lo \
+  MUMPS/src/ssol_distsol.lo \
   MUMPS/src/send_driver.lo \
   MUMPS/src/sana_aux_ELT.lo \
   MUMPS/src/sana_dist_m.lo \
@@ -1071,8 +1085,10 @@ SOBJS_OTHER = \
   MUMPS/src/sfac_asm_ELT.lo \
   MUMPS/src/sfac_asm.lo \
   MUMPS/src/sfac_b.lo \
+  MUMPS/src/sfac_diag.lo \
   MUMPS/src/sfac_distrib_distentry.lo \
   MUMPS/src/sfac_distrib_ELT.lo \
+  MUMPS/src/sfac_dist_arrowheads_omp.lo \
   MUMPS/src/sfac_lastrtnelind.lo \
   MUMPS/src/sfac_mem_alloc_cb.lo \
   MUMPS/src/sfac_mem_compress_cb.lo \
@@ -1340,13 +1356,13 @@ MUMPS/src/mumps_thread.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/mumps_type2_blocking.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
-MUMPS/src/mumps_type_size.lo: MUMPS/src/$(am__dirstamp) \
-	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/mumps_version.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/omp_tps_common_m.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/sol_common.lo: MUMPS/src/$(am__dirstamp) \
+	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
+MUMPS/src/sol_ds_common_m.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/tools_common.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
@@ -1396,11 +1412,15 @@ MUMPS/src/dfac_asm_master_m.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/dfac_b.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
+MUMPS/src/dfac_diag.lo: MUMPS/src/$(am__dirstamp) \
+	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/dfac_determinant.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/dfac_distrib_distentry.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/dfac_distrib_ELT.lo: MUMPS/src/$(am__dirstamp) \
+	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
+MUMPS/src/dfac_dist_arrowheads_omp.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/dfac_driver.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
@@ -1536,6 +1556,8 @@ MUMPS/src/dsol_c.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/dsol_distrhs.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
+MUMPS/src/dsol_distsol.lo: MUMPS/src/$(am__dirstamp) \
+	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/dsol_driver.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/dsol_fwd_aux.lo: MUMPS/src/$(am__dirstamp) \
@@ -1590,11 +1612,15 @@ MUMPS/src/sfac_asm_master_m.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/sfac_b.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
+MUMPS/src/sfac_diag.lo: MUMPS/src/$(am__dirstamp) \
+	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/sfac_determinant.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/sfac_distrib_distentry.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/sfac_distrib_ELT.lo: MUMPS/src/$(am__dirstamp) \
+	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
+MUMPS/src/sfac_dist_arrowheads_omp.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/sfac_driver.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
@@ -1729,6 +1755,8 @@ MUMPS/src/ssol_bwd.lo: MUMPS/src/$(am__dirstamp) \
 MUMPS/src/ssol_c.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/ssol_distrhs.lo: MUMPS/src/$(am__dirstamp) \
+	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
+MUMPS/src/ssol_distsol.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)
 MUMPS/src/ssol_driver.lo: MUMPS/src/$(am__dirstamp) \
 	MUMPS/src/$(DEPDIR)/$(am__dirstamp)

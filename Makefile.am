@@ -52,10 +52,10 @@ libcoinmumps_la_SOURCES = \
   MUMPS/src/mumps_register_thread.c \
   MUMPS/src/mumps_thread.c \
   MUMPS/src/mumps_type2_blocking.F \
-  MUMPS/src/mumps_type_size.F \
   MUMPS/src/mumps_version.F \
   MUMPS/src/omp_tps_common_m.F \
   MUMPS/src/sol_common.F \
+  MUMPS/src/sol_ds_common_m.F \
   MUMPS/src/tools_common.F \
   MUMPS/libseq/mpi.f \
   MUMPS/libseq/mpic.c \
@@ -82,9 +82,11 @@ libcoinmumps_la_SOURCES += \
   MUMPS/src/dfac_asm_master_ELT_m.F \
   MUMPS/src/dfac_asm_master_m.F \
   MUMPS/src/dfac_b.F \
+  MUMPS/src/dfac_diag.F \
   MUMPS/src/dfac_determinant.F \
   MUMPS/src/dfac_distrib_distentry.F \
   MUMPS/src/dfac_distrib_ELT.F \
+  MUMPS/src/dfac_dist_arrowheads_omp.F \
   MUMPS/src/dfac_driver.F \
   MUMPS/src/dfac_front_aux.F \
   MUMPS/src/dfac_front_LDLT_type1.F \
@@ -152,6 +154,7 @@ libcoinmumps_la_SOURCES += \
   MUMPS/src/dsol_bwd.F \
   MUMPS/src/dsol_c.F \
   MUMPS/src/dsol_distrhs.F \
+  MUMPS/src/dsol_distsol.F \
   MUMPS/src/dsol_driver.F \
   MUMPS/src/dsol_fwd_aux.F \
   MUMPS/src/dsol_fwd.F \
@@ -185,9 +188,11 @@ libcoinmumps_la_SOURCES += \
   MUMPS/src/sfac_asm_master_ELT_m.F \
   MUMPS/src/sfac_asm_master_m.F \
   MUMPS/src/sfac_b.F \
+  MUMPS/src/sfac_diag.F \
   MUMPS/src/sfac_determinant.F \
   MUMPS/src/sfac_distrib_distentry.F \
   MUMPS/src/sfac_distrib_ELT.F \
+  MUMPS/src/sfac_dist_arrowheads_omp.F \
   MUMPS/src/sfac_driver.F \
   MUMPS/src/sfac_front_aux.F \
   MUMPS/src/sfac_front_LDLT_type1.F \
@@ -255,6 +260,7 @@ libcoinmumps_la_SOURCES += \
   MUMPS/src/ssol_bwd.F \
   MUMPS/src/ssol_c.F \
   MUMPS/src/ssol_distrhs.F \
+  MUMPS/src/ssol_distsol.F \
   MUMPS/src/ssol_driver.F \
   MUMPS/src/ssol_fwd_aux.F \
   MUMPS/src/ssol_fwd.F \
@@ -703,7 +709,6 @@ OBJS_COMMON_OTHER = \
   MUMPS/src/ana_AMDMF.lo \
   MUMPS/src/bcast_errors.lo \
   MUMPS/src/estim_flops.lo \
-  MUMPS/src/mumps_type_size.lo \
   MUMPS/src/mumps_type2_blocking.lo \
   MUMPS/src/mumps_version.lo \
   MUMPS/src/mumps_print_defined.lo \
@@ -727,7 +732,8 @@ OBJS_COMMON_OTHER = \
   MUMPS/src/mumps_thread_affinity.lo \
   MUMPS/src/mumps_register_thread.lo \
   MUMPS/src/tools_common.lo \
-  MUMPS/src/sol_common.lo
+  MUMPS/src/sol_common.lo \
+  MUMPS/src/sol_ds_common_m.lo
 DOBJS_MOD = \
   MUMPS/src/dana_aux.lo \
   MUMPS/src/dana_aux_par.lo \
@@ -769,6 +775,7 @@ DOBJS_OTHER = \
   MUMPS/src/dfac_driver.lo \
   MUMPS/src/dsol_driver.lo \
   MUMPS/src/dsol_distrhs.lo \
+  MUMPS/src/dsol_distsol.lo \
   MUMPS/src/dend_driver.lo \
   MUMPS/src/dana_aux_ELT.lo \
   MUMPS/src/dana_dist_m.lo \
@@ -779,8 +786,10 @@ DOBJS_OTHER = \
   MUMPS/src/dfac_asm_ELT.lo \
   MUMPS/src/dfac_asm.lo \
   MUMPS/src/dfac_b.lo \
+  MUMPS/src/dfac_diag.lo \
   MUMPS/src/dfac_distrib_distentry.lo \
   MUMPS/src/dfac_distrib_ELT.lo \
+  MUMPS/src/dfac_dist_arrowheads_omp.lo \
   MUMPS/src/dfac_lastrtnelind.lo \
   MUMPS/src/dfac_mem_alloc_cb.lo \
   MUMPS/src/dfac_mem_compress_cb.lo \
@@ -869,6 +878,7 @@ SOBJS_OTHER = \
   MUMPS/src/sfac_driver.lo \
   MUMPS/src/ssol_driver.lo \
   MUMPS/src/ssol_distrhs.lo \
+  MUMPS/src/ssol_distsol.lo \
   MUMPS/src/send_driver.lo \
   MUMPS/src/sana_aux_ELT.lo \
   MUMPS/src/sana_dist_m.lo \
@@ -879,8 +889,10 @@ SOBJS_OTHER = \
   MUMPS/src/sfac_asm_ELT.lo \
   MUMPS/src/sfac_asm.lo \
   MUMPS/src/sfac_b.lo \
+  MUMPS/src/sfac_diag.lo \
   MUMPS/src/sfac_distrib_distentry.lo \
   MUMPS/src/sfac_distrib_ELT.lo \
+  MUMPS/src/sfac_dist_arrowheads_omp.lo \
   MUMPS/src/sfac_lastrtnelind.lo \
   MUMPS/src/sfac_mem_alloc_cb.lo \
   MUMPS/src/sfac_mem_compress_cb.lo \

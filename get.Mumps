@@ -1,8 +1,7 @@
 #!/bin/sh
 
 # Set the following to the latest MUMPS version.
-#  THERE MUST BE NO SPACE BEFORE AND AFTER THE EQUAL (=) OPERATOR.
-mumps_ver=5.6.2
+mumps_ver=5.7.0
 
 set -e
 
